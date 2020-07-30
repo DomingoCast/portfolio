@@ -1,0 +1,50 @@
+section
+    scroll-snap-align: start
+
+.bigContainer
+
+    position: relative
+    z-index: 2000
+    height: 100vh
+    width: 100vw
+    background: salmon
+    border-top: var(--padding) solid var(--white)
+    border-bottom: var(--padding) solid var(--white)
+    box-sizing: content-box //para que el border de arriba no llene el 100vh
+
+.background
+    width: 100%
+    height: 100%
+    display: flex
+
+.img
+    background: url('../../media/bill-evans.jpg')
+    background-size: cover
+    background-position: bottom
+    width: 100%
+    height: 100%
+
+.h1
+    width: 100%
+    text-align: center
+    position: absolute
+    top: 10rem
+    left: 50%
+    transform: translateX(-50%)
+    color: var(--white)
+
+    font-size: 12rem
+    text-transform: uppercase
+    letter-spacing: .4em
+
+.p
+    width: 60%
+    text-align: center
+    position: absolute
+    bottom: 10rem
+    left: 50%
+    transform: translateX(-50%)
+    color: var(--white)
+
+    font-size: 3rem
+    letter-spacing: .4em
