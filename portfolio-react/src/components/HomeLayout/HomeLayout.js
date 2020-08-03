@@ -1,8 +1,8 @@
 import React from 'react'
-import classes from './Title.module.sass'
+import classes from './HomeLayout.module.sass'
 
 import Title from '../Title/Title'
-import Menu from '../Menu/Title'
+import Menu from '../Menu/Menu'
 import AboutMe from '../AboutMe/AboutMe'
 import Projects from '../../containers/Projects/Projects'
 
@@ -10,7 +10,7 @@ const homeLayout = (props) => {
     console.log('classes', classes)
     return (
          <div className={classes.layout}>
-            <section>
+            <section className={classes.section}>
                 <div className={classes.onLayout}>
 
                     <div className={classes.h1Container}></div>
@@ -19,10 +19,10 @@ const homeLayout = (props) => {
                     <Menu/>
                 </div>
             </section>
-            <section>
+            <section className={classes.section}>
                 <AboutMe/>
             </section>
-            <section>
+            <section className={classes.section}>
                 <Projects/>
             </section>
         </div>

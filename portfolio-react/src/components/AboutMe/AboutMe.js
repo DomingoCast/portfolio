@@ -4,7 +4,7 @@ import classes from './AboutMe.module.sass'
 const aboutMe = (props) => {
     return (
         //<section>
-        <div className={classes.bigContainer}>
+        <div id="aboutMe" className={classes.bigContainer}>
             <div className={classes.background}>
                 <div className={classes.img + ' ' + classes.conImg1}></div>
                 <div className={classes.img + ' ' + classes.conImg2}></div>

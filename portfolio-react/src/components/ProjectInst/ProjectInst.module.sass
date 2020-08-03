@@ -1,0 +1,59 @@
+.container
+    position: relative
+.link
+    left: 50%
+    transform: translate(-50%)
+    position: absolute
+    z-index: 300
+    display: block
+    text-align: center
+    &:link, &:visited
+        text-decoration: none
+        color: var(--black)
+    font-size: 4.5rem
+    letter-spacing: .06em
+
+.text
+    position: relative
+    z-index: 3
+.block
+    position: absolute
+    z-index: 2
+    width: 130%
+    background: var(--white)
+    height: 20%
+    left: 50%
+    transform: translate(-50%)
+    top: 50%
+
+.window
+    margin: auto
+    transition: width .3s .0s, height .3s .2s
+    position: relative
+    z-index: 2
+    width: 100%
+    height: var(--cell-height)
+    background: var(--white)
+    margin-top: 3rem
+    padding: 2rem
+    padding-top: 4rem
+
+    &_content
+        transition: height .2s .4s
+        opacity: 1
+        position: relative
+        height: 100%
+        width: 100%
+        background: var(--grey-1)
+        top: 50%
+        transform: translateY(-50%)
+
+.hidden
+    //display: none
+    width: 0
+    height: 2rem
+    padding: 0rem
+    .window_content
+        opacity: 0
+        height: 0
+

@@ -9,16 +9,19 @@
     background-position: bottom
 
 .border
+    pointer-events: none //poder hacer click a link
     position: fixed
     height: 100vh
     width: 100vw
     border: var(--padding) solid var(--white)
     box-sizing: border-box
     z-index: 1000
+//.onLayout
+    //scroll-snap-align: start
 
-.layout
-    overflow-y: scroll
-    scroll-snap-type: y mandatory
+//.layout
+    //overflow-y: scroll
+    //scroll-snap-type: y mandatory
 
-section
-    scroll-snap-align: start
+//.section
+    //scroll-snap-align: start
