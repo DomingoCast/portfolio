@@ -25,28 +25,32 @@ const Projects = (props) => {
             url: null
         },
         pedro:{
-            id: "lista",
+            id: "ista",
             preview: null,
             url: 'https://lista-d4bd8.web.app/start'
         },
         banana:{
-            id: "burger",
+            id: "urger",
             preview: null,
             url: null
         },
         nicaragua:{
-            id: "pizza",
+            id: "izza",
             preview: null,
             url: null
         }
     })
     const [open, setOpen] = useState(null)
 
-    const handleClick = (e) => {
+    const handleClick = (e, id) => {
         //console.log(e.target.id)
         //console.log(e.target)
-        console.log('smth', e.target.id)
-        setOpen(e.target.id)
+        e.preventDefault()
+        if(open === id){
+            setOpen(null)
+        }else{
+            setOpen(id)
+        }
     }
 
 
@@ -60,7 +64,7 @@ const Projects = (props) => {
             url={projects[project].url}
             preview={projects[project].preview}
             opened={open === projects[project].id ? true : false}
-            click={handleClick}
+            click={(e) => handleClick(e, projects[project].id)}
         />
     )
 

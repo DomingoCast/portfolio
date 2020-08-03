@@ -1,5 +1,6 @@
 .container
     position: relative
+
 .link
     left: 50%
     transform: translate(-50%)
@@ -16,6 +17,7 @@
 .text
     position: relative
     z-index: 3
+
 .block
     position: absolute
     z-index: 2
@@ -38,6 +40,13 @@
     padding: 2rem
     padding-top: 4rem
 
+    &_link
+        display: block
+        position: relative
+        height: 100%
+        width: 100%
+        top: 50%
+
     &_content
         transition: height .2s .4s
         opacity: 1
@@ -45,7 +54,7 @@
         height: 100%
         width: 100%
         background: var(--grey-1)
-        top: 50%
+        //top: 50%
         transform: translateY(-50%)
 
 .hidden
@@ -57,3 +66,9 @@
         opacity: 0
         height: 0
 
+
+@media screen and (max-width: 50em)
+    .link
+        font-size: 10vw
+    .window
+      height: calc(80vw/1.3)

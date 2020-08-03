@@ -26,10 +26,12 @@ body
     font-size: 1.6rem
     font-family: 'Playfair Display', serif
     scroll-snap-type: y mandatory
-    overflow: scroll
+    overflow-y: scroll
+    overflow-x: hidden
 
 section
     scroll-snap-align: start
 
-
-
+@media screen and (max-width: 50em)
+    --cell-height: calc(80vw/1.3)
+    //--padding: 0
