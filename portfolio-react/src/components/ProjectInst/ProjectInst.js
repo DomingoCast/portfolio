@@ -7,6 +7,16 @@ const projectInst = (props) => {
     const windowClick = () => {
 
     }
+
+    let windowContent
+    if(props.preview){
+        windowContent = (
+            <img src={props.preview} alt="Preview not available"/>
+        )
+    } else {
+        windowContent = <p className={classes.alt}> Preview not available </p>
+    }
+
     return(
         <div id={props.id} className={classes.container} >
             <a className={classes.link} onClick={props.click} href="#">
@@ -14,7 +24,9 @@ const projectInst = (props) => {
             </a>
             <div className={classes.window + ' ' + display}>
                 <a href={props.url} rel="noopener noreferrer" target="_blank" className={classes.window_link}>
-                    <div className={classes.window_content}></div>
+                    <div className={classes.window_content}>
+                        {windowContent}
+                    </div>
                 </a>
             </div>
         </div>

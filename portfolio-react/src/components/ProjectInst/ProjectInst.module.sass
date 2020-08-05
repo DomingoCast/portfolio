@@ -46,6 +46,9 @@
         height: 100%
         width: 100%
         top: 50%
+        &:link, &:visited
+            color: var(--black)
+            text-decoration: none
 
     &_content
         transition: height .2s .4s
@@ -56,6 +59,14 @@
         background: var(--grey-1)
         //top: 50%
         transform: translateY(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+.alt
+    opacity: 1
+    font-size: 2.5rem
+    transition: all .1s .3s
+
 
 .hidden
     //display: none
@@ -65,10 +76,11 @@
     .window_content
         opacity: 0
         height: 0
+    .alt
+        opacity: 0
 
 
 @media screen and (max-width: 50em)
     .link
         font-size: 10vw
-    .window
-      height: calc(80vw/1.3)
+

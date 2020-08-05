@@ -10,6 +10,12 @@
     position: relative
     top: 6rem
     //border: 3px solid salmon
+
+.optionsContainer
+    position: relative
+    display: block
+    top: 18rem
+    text-align: center
     margin-bottom: 25rem
 
 .projectContainer
@@ -26,6 +32,5 @@
 @media screen and (max-width: 50em)
     .projectContainer
         grid-template-columns: repeat(1, 1fr)
-    .title
-        color: red
-
+        grid-auto-rows: auto
+        row-gap: 5rem
