@@ -33,7 +33,7 @@
     transition: width .3s .0s, height .3s .2s
     position: relative
     z-index: 2
-    width: 100%
+    width: 55rem
     height: var(--cell-height)
     background: var(--white)
     margin-top: 3rem
@@ -62,6 +62,13 @@
         display: flex
         justify-content: center
         align-items: center
+        overflow: hidden
+
+.preview
+    //width: 100%
+    height: 100%
+    //transition: all .0s .5s
+
 .alt
     opacity: 1
     font-size: 2.5rem
@@ -78,9 +85,15 @@
         height: 0
     .alt
         opacity: 0
+    .preview
+        opacity: 0
 
 
 @media screen and (max-width: 50em)
     .link
         font-size: 10vw
+    .container
+        width: 80%
+    .window
+        width: 100%
 

@@ -5,6 +5,9 @@ import BlockText from '../../components/BlockText/BlockText'
 import LinkInst from '../../components/LinkInst/LinkInst'
 import Option from '../../components/Option/Option'
 
+import burger from '../../media/previews/burger.png'
+import lista from '../../media/previews/lista-vertical.png'
+
 
 import classes from './Projects.module.sass'
 
@@ -13,12 +16,12 @@ const Projects = (props) => {
         websites:{
             lista:{
                 id: "lista",
-                preview: null,
+                preview: lista,
                 url: 'https://lista-d4bd8.web.app/start'
             },
             burger:{
                 id: "burger",
-                preview: null,
+                preview: burger,
                 url: null
             },
             pizza:{

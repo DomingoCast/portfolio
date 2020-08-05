@@ -11,7 +11,7 @@ const projectInst = (props) => {
     let windowContent
     if(props.preview){
         windowContent = (
-            <img src={props.preview} alt="Preview not available"/>
+            <img className={classes.preview} src={props.preview} alt="Preview not available"/>
         )
     } else {
         windowContent = <p className={classes.alt}> Preview not available </p>
