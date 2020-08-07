@@ -1,11 +1,10 @@
-section
-    scroll-snap-align: start
 
 .bigContainer
 
     position: relative
     z-index: 2000
     height: 100vh
+    height: var(--totalVh)
     width: 100vw
     background: salmon
     //border-top: var(--padding) solid var(--white)
@@ -19,7 +18,7 @@ section
 
 .frame
     overflow: hidden
-    background: url('../../media/bill-evans.jpg')
+    background: url('../../media/images/bill-evans.jpg')
     background-size: cover
     background-position: bottom
     width: 100%
@@ -73,8 +72,23 @@ section
 @media screen and (max-width: 69em)
     .p
       color: yellow
-@media screen and (max-width: 52em)
+@media screen and (max-width: 30em)
     .h1
-        font-size: 15vw
+        font-size: 14vw
+        top: 25%
     .p
-        font-size: 4.3vw
+        color: var(--white)
+        font-size: 3rem
+        top: 48%
+        width: 80%
+        font-weight: 600
+    .frame
+        &_1
+            width: 100%
+        &_2
+            display: none
+        &_3
+            display: none
+    .img_1
+        left: 0
+        top: 0

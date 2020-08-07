@@ -2,6 +2,7 @@
 html
     font-size: 62.5%
     scroll-behavior: smooth
+    scroll-snap-type: y proximity
 
 html, *
     margin: 0
@@ -27,12 +28,9 @@ html, *
 body
     font-size: 1.6rem
     font-family: 'Playfair Display', serif
-    scroll-snap-type: y mandatory
-    overflow-y: scroll
-    overflow-x: hidden
+    //overflow-y: scroll
+    //overflow-x: hidden
 
-section
-    scroll-snap-align: start
 
 @media screen and (max-width: 50em)
     --cell-height: calc(80vw/1.3)

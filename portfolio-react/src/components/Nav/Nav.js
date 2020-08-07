@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './Nav.module.sass'
 
-import nextBlack from '../../media/next.svg'
-import backBlack from '../../media/back.svg'
-import nextWhite from '../../media/next-white.svg'
-import backWhite from '../../media/back-white.svg'
+import nextBlack from '../../media/svg/next.svg'
+import backBlack from '../../media/svg/back.svg'
+import nextWhite from '../../media/svg/next-white.svg'
+import backWhite from '../../media/svg/back-white.svg'
 
 const nav = (props) => (
     <div className={classes.nav}>

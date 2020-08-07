@@ -45,7 +45,7 @@
         position: relative
         height: 100%
         width: 100%
-        top: 50%
+        //top: 50%
         &:link, &:visited
             color: var(--black)
             text-decoration: none
@@ -58,7 +58,7 @@
         width: 100%
         background: var(--grey-1)
         //top: 50%
-        transform: translateY(-50%)
+        //transform: translateY(-50%)
         display: flex
         justify-content: center
         align-items: center
@@ -70,15 +70,76 @@
     //transition: all .0s .5s
 
 .alt
+    display: block
+    padding-bottom: 2em
+
     opacity: 1
     font-size: 2.5rem
     transition: all .1s .3s
+    text-align: center
 
+.hoverBack
+    display: flex
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(#F4F4F4, 0.6)
+    top: 0
+    left: 0
+    justify-content: space-between
+    padding: 15% 25%
+    //width: 150%
+    transition: all .4s
+
+.svg
+    height: 100%
+.circle
+    height: 10rem
+    width: 10rem
+    //border: 3px solid cyan
+    border-radius: 100%
+    padding: 10%
+    background: rgba(#FFFFFF, .9)
+    
+    transition: all .3s ease-out
+    &_1
+        transform: translateX(-10rem)
+        .www
+            position: absolute
+            top: 47%
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-weight: 700
+            color: #535353
+            font-size: 3rem
+    &_2
+        transform: translateX(10rem)
+        .www
+            position: absolute
+            top: 47%
+            left: 51%
+            transform: translate(-50%, -50%)
+            font-weight: 700
+            color: #535353
+            font-size: 7rem
+        padding: 12%
+
+.window:hover
+    .hoverBack
+        opacity: 1
+        width: 100%
+    .circle
+        //height: 100%
+        &_1
+            transform: translateX(0rem)
+        &_2
+            transform: translateX(0rem)
 
 .hidden
     //display: none
     width: 0
-    height: 2rem
+    height: 0rem
     padding: 0rem
     .window_content
         opacity: 0
@@ -87,13 +148,98 @@
         opacity: 0
     .preview
         opacity: 0
+    //.hoverBack
+        //display: none
 
 
 @media screen and (max-width: 50em)
     .link
         font-size: 10vw
     .container
-        width: 80%
+        width: 100%
+        margin: auto
     .window
         width: 100%
+        height: auto
+        &_content
+            max-height: 60vw
+            min-height: 15rem
+            overflow: hidden
+    .preview
+        height: auto
+        max-width: 100%
+        display: block
+        margin: auto
 
+    //BUTTONS
+    .hoverBack
+        display: flex
+        opacity: 1
+        position: absolute
+        width: 100%
+        height: auto
+        background: transparent
+        top: unset
+        left: 0
+        bottom: 0
+        justify-content: space-between
+
+        padding: .5rem
+        transition: all .4s .3s
+
+    .svg
+        height: 100%
+    .circle
+        transition: all .4s .4s
+        height: 6rem
+        width: 6rem
+        //border: 3px solid cyan
+        border-radius: 100%
+        box-shadow: 0px 0px 4px #C4C4C4
+        padding: 10%
+        background: rgba(#FFFFFF, .9)
+        position: relative
+        z-index: 7000
+        transform: translateX(0)
+
+        
+        transition: all .3s ease-out
+        &_1
+            //transform: translateX(-10rem)
+            .www
+                position: absolute
+                top: 47%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-weight: 700
+                color: #535353
+                font-size: 2rem
+        &_2
+            //transform: translateX(10rem)
+            .www
+                position: absolute
+                top: 47%
+                left: 51%
+                transform: translate(-50%, -50%)
+                font-weight: 700
+                color: #535353
+                font-size: 3rem
+            //padding: 12%
+
+.hidden
+    //display: none
+    width: 0
+    height: 0rem
+    padding: 0rem
+    .window_content
+        opacity: 0
+        height: 0
+    .alt
+        opacity: 0
+    .preview
+        opacity: 0
+    .hoverBack
+        opacity: 0
+    .circle
+        height: 0rem
+        width: 0rem

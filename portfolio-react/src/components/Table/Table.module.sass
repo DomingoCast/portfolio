@@ -1,0 +1,40 @@
+.table
+    font-size: 1.8rem
+    display: grid
+    //grid-auto-columns: 5rem
+    grid-template-columns: 1fr 1fr
+    width: 25rem
+    grid-gap: .5rem
+    position: relative
+
+.column
+    display: grid
+    grid-auto-rows: 1.3em
+    grid-gap: .15rem
+.head
+    display: block
+    font-size: 2rem
+    padding-bottom: 1rem
+    letter-spacing: .05em
+    //justify-self: center
+    
+.entry
+    display: block
+    padding-left: 1em
+
+.sep
+    &_v
+        position: absolute
+        height: 100%
+        top: 0
+        left: 47%
+        border-left: 1px solid #BDBDBD
+    &_h
+        position: absolute
+        width: 100%
+        top: 1.4em
+        left: 0%
+        border-bottom: 1px solid #BDBDBD
+        
+
+

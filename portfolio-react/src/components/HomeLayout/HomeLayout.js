@@ -7,6 +7,8 @@ import AboutMe from '../AboutMe/AboutMe'
 import Projects from '../../containers/Projects/Projects'
 import Nav from '../Nav/Nav'
 
+import realVh from '../../util/real-vh'
+
 const HomeLayout = (props) => {
     const [currSection, setCSection] = useState(null)
     useEffect(() => {
@@ -15,37 +17,40 @@ const HomeLayout = (props) => {
     }, [props])
     const handleBack = (e) => {
         e.preventDefault()
-        if(currSection.id !== 'title'){
-            setCSection(currSection.previousSibling)
-            currSection.previousSibling.scrollIntoView()
+        const theSectionID = document.elementFromPoint(0,0).className.split('_')[0]
+        const theSection = document.getElementById(theSectionID)
+        console.log(['THESECTION'], theSectionID, theSection)
+        if(theSection.id !== 'title'){
+            theSection.previousSibling.scrollIntoView()
             console.log('[BACK]')
         }
     }
     const handleNext = (e) => {
-        console.log('[NEXT]')
-        console.log(currSection, document.getElementById('title'))
+        console.log('[NEXT]',document.elementFromPoint(0,0), document.elementFromPoint(0,0).parentElement.id)
         e.preventDefault()
-        if (currSection.nextSibling){
-            setCSection(currSection.nextSibling)
-            console.log('next, ', currSection, currSection.nextSibling)
-            currSection.nextSibling.scrollIntoView()
+        const theSectionID = document.elementFromPoint(0,0).className.split('_')[0]
+        const theSection = document.getElementById(theSectionID)
+        console.log(['THESECTION'], theSectionID, theSection)
+        if (theSection.nextSibling){
+            theSection.nextSibling.scrollIntoView()
         }
     }
+    realVh()
     return (
          <div className={classes.layout}>
             <div className={classes.h1Container}></div>
             <div className={classes.border}></div>
             <Nav back={(e)=> handleBack(e)} next={(e) => handleNext(e)}/>
-            <section id="title" className={classes.section}>
+            <section id="Title" className={classes.section}>
                 <Title/>
             </section>
-            <section id="menu" className={classes.section}>
+            <section id="Menu" className={classes.section}>
                 <Menu/>
             </section>
-            <section id="aboutMe"className={classes.section}>
+            <section id="AboutMe"className={classes.section}>
                 <AboutMe/>
             </section>
-            <section id="projecs"className={classes.section}>
+            <section id="Projects"className={classes.section}>
                 <Projects/>
             </section>
         </div>
