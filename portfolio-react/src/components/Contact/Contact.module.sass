@@ -1,0 +1,54 @@
+
+.bigContainer
+
+    position: relative
+    z-index: 2000
+
+    height: var(--totalVh)
+    width: 100%
+    box-sizing: border-box
+    //background-size: cover
+    //background-position: bottom
+    //background: url('../../media/images/bosque2.jpg')
+    background: white
+    padding: var(--padding)
+
+.border
+    height: var(--totalVh)
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    border: var(--padding) solid #E5E5E5//var(--grey-1)
+    z-index: 5000
+    pointer-events: none
+
+.h2
+    position: relative
+    text-align: center
+    top: 20%
+    font-size: 5rem
+
+.linkContainer
+    position: relative
+    top: 40%
+    margin: auto
+    width: 30em
+    display: flex
+    justify-content: space-between
+    font-size: 3rem
+
+.link
+    &:link, &:visited
+        color: var(--black)
+        text-decoration: none
+    
+@media screen and (max-width: 50em)
+    .linkContainer
+        flex-flow: column
+        height: 6rem
+        width: 100%
+        align-items: center
+    .link
+        display: block
+        width: fit-content

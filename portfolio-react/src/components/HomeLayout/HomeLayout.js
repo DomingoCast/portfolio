@@ -4,6 +4,7 @@ import classes from './HomeLayout.module.sass'
 import Title from '../Title/Title'
 import Menu from '../Menu/Menu'
 import AboutMe from '../AboutMe/AboutMe'
+import Contact from '../Contact/Contact'
 import Projects from '../../containers/Projects/Projects'
 import Nav from '../Nav/Nav'
 
@@ -52,6 +53,9 @@ const HomeLayout = (props) => {
             </section>
             <section id="Projects"className={classes.section}>
                 <Projects/>
+            </section>
+            <section id="Contact"className={classes.section}>
+                <Contact/>
             </section>
         </div>
     )
