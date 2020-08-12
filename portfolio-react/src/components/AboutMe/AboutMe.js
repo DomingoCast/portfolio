@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './AboutMe.module.sass'
 import billEvans from '../../media/images/bill-evans.jpg'
+//import billEvans from '../../media/images/bill-evans-comp.jpg'
 
 const aboutMe = (props) => {
     return (
