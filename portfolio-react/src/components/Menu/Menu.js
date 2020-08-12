@@ -9,7 +9,6 @@ const home = (props) => {
         <div className={classes.h1Container}>
             <LinkInst text="About Me" link="aboutMe"/>
             <LinkInst text="Portfolio"link="portfolio"/>
-            <LinkInst text="Blog" link="blog"/>
         </div>
     )
 }
