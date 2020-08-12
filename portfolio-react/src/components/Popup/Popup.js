@@ -16,14 +16,16 @@ const popup = (props)=> {
                 <h2 className={classes.h2}>{props.project.title}</h2>
                 <div className={classes.middle}>
                     <p className={classes.p}>{props.project.description}</p>
-                    <div className={classes.technologies}>
-                        <h3 className={classes.h3}>Technologies</h3>
-                        <Table table={props.project.technologies}/>
-                    </div>
+                    {props.type==='websites' ? 
+                        <div className={classes.technologies}>
+                            <h3 className={classes.h3}>Technologies</h3>
+                            <Table table={props.project.technologies}/>
+                        </div>
+                    : null}
                 </div>
-                <div className={classes.buttons}>
-                    <a className={classes.link} href={props.project.github}>github</a>
-                    <a className={classes.link} href={props.project.website}>www</a>
+                <div className={classes.buttons+' '+ (props.type === "websites" ? null : classes.videos)}>
+                    { props.type==='websites' ? <a className={classes.link} target="_blank" rel="noopener noreferrer" href={props.project.github}>github</a> : null }
+                    <a className={classes.link} target="_blank" rel="noopener noreferrer" href={props.project.url}>www</a>
                 </div>
             </div>
         </div>

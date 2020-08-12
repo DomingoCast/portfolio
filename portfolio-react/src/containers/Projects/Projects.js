@@ -9,8 +9,9 @@ import Popup from '../../components/Popup/Popup'
 
 import burger from '../../media/previews/burger.png'
 import lista from '../../media/previews/lista-vertical.png'
-
 import classes from './Projects.module.sass'
+import videoclip from '../../media/previews/videoclip.png'
+import domingoShow from '../../media/previews/domingo-show.png'
 
 const Projects = (props) => {
     const [projects, setProjects] = useState({
@@ -21,11 +22,11 @@ const Projects = (props) => {
                 preview: lista,
                 url: 'https://lista-d4bd8.web.app/start',
                 technologies:{
-                    'Front-end': [],
-                    'Back-end': [],
+                    'Front-end': ['React', 'Redux', 'SASS'],
+                    'Back-end': ['Node.js', 'Heroku', 'MongoDB'],
                 },
-                description:"",
-                github:"",
+                description:"    Lista is a personal project that I create at first to help my family. It is used for creating lists and sharing them with people. In my case a groceries list to share with my family",
+                github:"https://github.com/DomingoCast/lista",
             },
             burger:{
                 id: "burger",
@@ -33,42 +34,26 @@ const Projects = (props) => {
                 preview: burger,
                 url: null,
                 technologies:{
-                    'Front-end': ['React', 'Redux', 'Sass'],
+                    'Front-end': ['React', 'Redux', 'SASS'],
                     'Back-end': ['Firebase', 'MongoDB'],
                 },
                 description:"     Burgers is a project where you can build your own burger to taste. In reality it would serve a restaurant but I just did it to experiment with React, Redux and the firebase for the backend",
                 github:"https://github.com/DomingoCast/burger-project",
-            },
-            pizza:{
-                id: "pizza",
-                preview: null,
-                url: null
-            },
-            pedro:{
-                id: "ista",
-                preview: null,
-                url: 'https://lista-d4bd8.web.app/start'
-            },
-            banana:{
-                id: "urger",
-                preview: null,
-                url: null
-            },
-            nicaragua:{
-                id: "izza",
-                preview: null,
-                url: null
             }
         },
         videos: {
             videoclip: {
                 id: "videoclip",
-                preview: null,
+                title: "videoclip",
+                preview: videoclip,
+                description:"    This is a videoclip I directed with a friend of mine for a local artist in my city. There are quite a lot of imperfections but it was the first videoclip I directed and we worked with no budget",
                 url: "https://youtu.be/oDIxpPOu2A4"
             },
-            domingoShow: {
+            show: {
                 id: "show",
-                preview: null,
+                title: "show",
+                preview: domingoShow,
+                description:"    This is the last of a series of daily videos that I did in my youtube channel for a week, where I created a mimic of a late night show with just me in my bedroom. It was challenging, the result was not perfect but it was a great experience and I learned a lot",
                 url: "https://youtu.be/1s_O8KHwRtU"
             }
 
@@ -121,6 +106,7 @@ const Projects = (props) => {
             key={currProjects[project].id}
             id={currProjects[project].id}
             name={project}
+            type={currOption}
             url={currProjects[project].url}
             preview={currProjects[project].preview}
             opened={open === currProjects[project].id ? true : false}
@@ -134,7 +120,7 @@ const Projects = (props) => {
     //console.log('[POP]', currOption, open, projects[currOption][open])
     return (
         <>
-        <Popup pop={onPop} back={handleMore}project={projects[currOption][open]}/>
+        <Popup pop={onPop} type={currOption} back={handleMore}project={projects[currOption][open]}/>
         <div id="portfolio" className={classes.bigContainer}>
             <div className={classes.title}>
                 <BlockText className={classes.h2} > Portfolio </BlockText>
