@@ -11,7 +11,13 @@
     //background-position: bottom
     //background: url('../../media/images/bosque2.jpg')
     background: white
-    padding: var(--padding)
+    padding: 15% calc(2*var(--padding))
+
+    //FLEX
+    display: flex
+    flex-flow: column
+    justify-content: space-around
+    align-items: center
 
 .border
     height: var(--totalVh)
@@ -24,15 +30,15 @@
     pointer-events: none
 
 .h2
-    position: relative
+    //position: relative
+    //top: 20%
     text-align: center
-    top: 20%
     font-size: 5rem
 
 .linkContainer
-    position: relative
-    top: 40%
-    margin: auto
+    //position: relative
+    //top: 40%
+    //margin: auto
     width: 30em
     display: flex
     justify-content: space-between
@@ -42,7 +48,14 @@
     &:link, &:visited
         color: var(--black)
         text-decoration: none
-    
+
+.info
+    //position: relative
+    //top: 50%
+    //margin: auto
+    width: fit-content
+    font-size: 2rem
+
 @media screen and (max-width: 50em)
     .linkContainer
         flex-flow: column
