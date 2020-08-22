@@ -9,6 +9,8 @@ import Popup from '../../components/Popup/Popup'
 
 import burger from '../../media/previews/burger.png'
 import lista from '../../media/previews/lista-vertical.png'
+import tomates from '../../media/previews/tomates.jpeg'
+
 import classes from './Projects.module.sass'
 import videoclip from '../../media/previews/videoclip.png'
 import domingoShow from '../../media/previews/domingo-show.png'
@@ -25,7 +27,7 @@ const Projects = (props) => {
                     'Front-end': ['React', 'Redux', 'SASS'],
                     'Back-end': ['Node.js', 'Heroku', 'MongoDB'],
                 },
-                description:"    Lista is a personal project that I create at first to help my family. It is used for creating lists and sharing them with people. In my case a groceries list to share with my family",
+                description:"    Lista is a personal project that I create at first to help my family. It is used for creating lists and sharing them with people. In my case a groceries list to share with my family. The project is not finished yet",
                 github:"https://github.com/DomingoCast/lista",
             },
             burger:{
@@ -39,6 +41,20 @@ const Projects = (props) => {
                 },
                 description:"     Burgers is a project where you can build your own burger to taste. In reality it would serve a restaurant but I just did it to experiment with React, Redux and the firebase for the backend",
                 github:"https://github.com/DomingoCast/burger-project",
+            }
+        },
+        apps: {
+            tomates:{
+                id: "tomates",
+                title: "tomates",
+                preview: tomates,
+                url: null,
+                technologies:{
+                    'Front-end': ['React Native'],
+                    'Back-end': ['Firebase', 'MongoDB'],
+                },
+                description: "    Tomates is my first mobile app using React Native. Is a timer and activity tracker to use the pomodoro technique. I created it because I was tracking the amount of 'tomatoes' and extra time that I did each day and month by hand and that wasn't efficient enough. The project is not finished yet but I'm working on it",
+                github: "https://github.com/DomingoCast/tomates"
             }
         },
         videos: {
