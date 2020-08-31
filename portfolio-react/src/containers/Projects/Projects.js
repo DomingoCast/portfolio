@@ -10,14 +10,27 @@ import Popup from '../../components/Popup/Popup'
 import burger from '../../media/previews/burger.png'
 import lista from '../../media/previews/lista-vertical.png'
 import tomates from '../../media/previews/tomates.jpeg'
+import domingoShow from '../../media/previews/domingo-show.png'
+import nereaMolina from '../../media/previews/preview-nerea-portfolio.png'
 
 import classes from './Projects.module.sass'
 import videoclip from '../../media/previews/videoclip.png'
-import domingoShow from '../../media/previews/domingo-show.png'
 
 const Projects = (props) => {
     const [projects, setProjects] = useState({
         websites:{
+            "nerea molina":{
+                id: "nerea molina",
+                title: "nerea molina",
+                preview: nereaMolina,
+                url: 'https://nereamolina-4becc.web.app/',
+                technologies:{
+                    'Front-end': ['React', 'SASS'],
+                    'Back-end': [''],
+                },
+                description:"    Portfolio para una fotógrafa local. (En desarrollo)",
+                github:"https://github.com/DomingoCast/nerea-portfolio",
+            },
             lista:{
                 id: "lista",
                 title: "lista",

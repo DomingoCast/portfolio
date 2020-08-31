@@ -10,7 +10,6 @@ const aboutMe = (props) => {
             <div className={classes.background}>
                 <div className={classes.frame+' '+classes.frame_1}>
                     <img className={classes.img + ' ' + classes.img_1} src={billEvans} alt="background image"/>
-
                 </div>
                 <div className={classes.frame+' '+classes.frame_2}>
                     <img className={classes.img + ' ' + classes.img_2} src={billEvans} alt="background image"/>
