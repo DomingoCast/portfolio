@@ -12,6 +12,7 @@ import lista from '../../media/previews/lista-vertical.png'
 import tomates from '../../media/previews/tomates.jpeg'
 import domingoShow from '../../media/previews/domingo-show.png'
 import nereaMolina from '../../media/previews/preview-nerea-portfolio.png'
+import domingoCast from '../../media/previews/domingo-cast.png'
 
 import classes from './Projects.module.sass'
 import videoclip from '../../media/previews/videoclip.png'
@@ -30,6 +31,18 @@ const Projects = (props) => {
                 },
                 description:"    Portfolio para una fotógrafa local. (En desarrollo)",
                 github:"https://github.com/DomingoCast/nerea-portfolio",
+            },
+            "domingo cast":{
+                id: "domingo cast",
+                title: "nerea molina",
+                preview: domingoCast,
+                url: 'https://domingocast.com',
+                technologies:{
+                    'Front-end': ['React', 'SASS'],
+                    'Back-end': [''],
+                },
+                description:"    Portfolio personal",
+                github:"https://github.com/DomingoCast/portfolio",
             },
             lista:{
                 id: "lista",

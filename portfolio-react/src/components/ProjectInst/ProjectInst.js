@@ -20,10 +20,15 @@ const projectInst = (props) => {
         windowContent = <p className={classes.alt}> Preview not available </p>
     }
 
+    let twoWorded = null
+    if(props.name.split(' ').length > 1){
+        twoWorded = classes.twoWorded
+    }
+
                                 //<img className={classes.svg} src={internet} alt='www'/>
                                 //<img className={classes.svg} src={plus} alt='+'/>
     return(
-        <div id={props.id} className={classes.container} >
+        <div id={props.id} className={classes.container+' '+twoWorded} >
             <a className={classes.link} onClick={props.click} href="#">
                 <span className={classes.text}>{props.name}</span><div className={classes.block}></div>
             </a>
