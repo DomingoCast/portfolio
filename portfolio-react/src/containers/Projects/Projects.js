@@ -13,6 +13,7 @@ import tomates from '../../media/previews/tomates.jpeg'
 import domingoShow from '../../media/previews/domingo-show.png'
 import nereaMolina from '../../media/previews/preview-nerea-portfolio.png'
 import domingoCast from '../../media/previews/domingo-cast.png'
+import customPortfolio from '../../media/previews/custom-portfolio.png'
 
 import classes from './Projects.module.sass'
 import videoclip from '../../media/previews/videoclip.png'
@@ -20,6 +21,18 @@ import videoclip from '../../media/previews/videoclip.png'
 const Projects = (props) => {
     const [projects, setProjects] = useState({
         websites:{
+            "custom portfolio":{
+                id: "custom portfolio",
+                title: "custom portfolio",
+                preview: customPortfolio,
+                url: null,
+                technologies:{
+                    'Front-end': ['React', 'Typescript'],
+                    'Back-end': ['Nodejs', 'Kubernetes'],
+                },
+                description:"    Web app that allows the user to have a \"custom\" porfolio without much overhead",
+                github:"https://github.com/DomingoCast/custom-portfolio",
+            },
             "nerea molina":{
                 id: "nerea molina",
                 title: "nerea molina",
